@@ -13,8 +13,8 @@ function HTMLActuator() {
   
 }
 
-dogeSayings = ['Lisää viinaa!', 'Silmät liikkuu vielä!', 'Pirkka <3', 'Perjantai!', 'Lauantai!', 'Keskiviikko!', 'Jaksaa!', 'Gambina <3', 'Känni päälle!', 'Kas, lempijuomaani!', 'Kova meno!', 'Napsut vielä!' ,'Sit saunaan!',
-    'Normipäivä!', 'Lisää!!!','Pienet sille!','Napsuu!','Tuo mullekin!','Viinaa!!','Kossua!','Jallua!','Leijonaa!','Tuo kaksi!','Muutamat vielä']
+dogeSayings = ['Lisää!', 'Megis <3', 'Perjantai!', 'Lauantai!', 'Keskiviikko!', 'Jaksaa!', 'Pärinä päälle!', 'Kas, lempijuomaani!', 'Kova meno!', 'Napsut vielä!' ,'Sit saunaan!',
+    'Normipäivä!', 'Lisää!!!','Pienet sille!','Napsuu!','Tuo mullekin!','ES!','Ed!','Red bull!','Tuo kaksi!','Muutamat vielä']
 
 HTMLActuator.prototype.actuate = function (grid, metadata) {
   var self = this;
@@ -191,7 +191,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "LASOL! <3" : "Game over!";
+  var message = won ? "MONSTER! <3" : "Game over!";
 
   this.messageContainer.classList.add(type);
   this.messageContainer.getElementsByTagName("p")[0].textContent = message;
@@ -230,13 +230,6 @@ HTMLActuator.prototype.goKatko = function () {
     addition.classList.add("score-addition");
     addition.textContent = "-1000";
     this.scoreContainer.appendChild(addition);
-    
-    //var message = "KATKOLLE!";
-    var messageElement = document.createElement("img");
-    messageElement.setAttribute('src',"/img/katko.png");
-    //messageElement.textContent = message;
-    //var left = 'left: 37%;';
-    //var top = 'top: 10%;';
 
     //var color = 'color: rgb(' + Math.round(Math.random() * 255) + ', ' + Math.round(Math.random() * 255) + ', ' + Math.round(Math.random() * 255) + ');'
     //var color = 'font-weight: bold; color: black; text-shadow:0px 0px 50px #ff0000;}';
